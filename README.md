@@ -8,7 +8,7 @@
 
 ***
 ### *Description*
-#### The game consists of an even number of tiles with images on one side and a generic back. Each image appears on precisely two tiles. When the game starts, all tiles are turned face down. The player then flips over two cards, selecting them by clicking on them.
+#### The game consists of an even number of tiles with images on one side and a generic back. Each image appears on precisely two tiles. When the game starts, all tiles are turned face down. The player then flips over two cards, selecting them by clicking on them.You will win if you finish all identical images.
 
 ### ***Technologies Used***
 * HTML

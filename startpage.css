@@ -1,0 +1,40 @@
+html{
+    width: 100vh;
+    height: 100vh;
+    background-image:url(IMG_0250.jpg);
+    background-repeat: no-repeat;
+}
+
+.topic{
+    margin:0 auto;
+    text-align: center;
+    font-family: "Lucida Console", "Monaco", monospace;
+    text-shadow: 3px 3px #f4a272ec;
+    color: rgb(255, 0, 123);
+
+}
+
+button{
+
+    background-color: #ff67e1;
+    border-radius: 100px;
+    box-shadow: rgba(244, 116, 216, 0.925) 0 -25px 18px -14px inset,rgba(255, 133, 216, 0.732) 0 1px 2px,rgba(235, 65, 190, 0.914) 0 2px 4px,rgba(255, 0, 204, 0.767) 0 4px 8px,rgba(237, 48, 193, 0.848) 0 8px 16px,rgba(231, 34, 139, 0.801) 0 16px 32px;
+    color: rgb(255, 193, 221);
+    cursor:pointer;
+    font-family: "Lucida Console", "Monaco", monospace;
+    padding: 7px 20px;
+    text-align: center;
+    border: 0;
+    font-size: 16px;
+    }
+    .btn{
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }

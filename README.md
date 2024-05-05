@@ -21,7 +21,7 @@
 ### ***Screenshots***
 
 ##### image header 1
-![start page]![Alt text](/image%20copy.png)
+![start page]![Alt text](./IMAGES/image%20copy.png)
 
 ##### image header 2
 ![smile2]()

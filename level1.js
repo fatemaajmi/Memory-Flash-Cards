@@ -2,6 +2,9 @@ const cards = document.querySelectorAll(".card")
 let matched = 0
 let cardOne, cardTwo
 let disableDeck = false
+
+
+
 let flipCard=(({target: clickedCard}) =>{
     if(cardOne !== clickedCard && !disableDeck) {
         clickedCard.classList.add("flip")
@@ -61,3 +64,22 @@ cards.forEach(card => {
     card.addEventListener("click", flipCard)
 })
 
+
+let countdownElement = document.getElementById('second')
+
+let countdown=((minutes)=> {
+    let seconds = minutes * 60
+    let interval = setInterval(function() {
+        let minutesRemaining = Math.floor(seconds / 60)
+        let secondsRemaining = seconds % 60
+
+        countdownElement.innerHTML = minutesRemaining + ":" + (secondsRemaining < 10 ? "0" : "") + secondsRemaining
+
+        if (--seconds < 0) {
+            clearInterval(interval)
+            countdownElement.innerHTML = shuffleCard()
+        }
+    }, 1000)
+})
+
+countdown(1)

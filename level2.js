@@ -22,7 +22,11 @@ updateLifeUI()
 
 if (lifeCount === 0) {
 clearInterval(interval)
-countdownElement.innerHTML = 'Gave Over! No lifes left.. Try again'
+countdownElement.innerHTML = 'Game Over! No lifes left.. Try again'
+alert("Game Over! No lifes left.. Try again")
+shuffleCard()
+countdown(1)
+
 }
 flips = 0
 })
@@ -142,13 +146,18 @@ countdownElement.innerHTML =
 if (--seconds < 0) {
     clearInterval(interval)
     countdownElement.innerHTML = 'Time Up .. Try again'
+    alert("Time Up .. Try again")
     shuffleCard()
     countdown(1.5)
 }
 if (matched == 8) {
     clearInterval(interval)
     countdownElement.innerHTML = 'You Win !!!'
+    alert("You Win !!!")
+
     countdown(1.5)
+    shuffleCard()
+
 }
 }, 1000)
 }

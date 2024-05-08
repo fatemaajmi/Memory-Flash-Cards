@@ -2,6 +2,8 @@ const cards = document.querySelectorAll(".card")
 let matched = 0
 let cardOne, cardTwo
 let disableDeck = false
+
+
 let flipCard=(({target: clickedCard}) =>{
     if(cardOne !== clickedCard && !disableDeck) {
         clickedCard.classList.add("flip")
@@ -23,7 +25,6 @@ let matchCards=((img1, img2) =>{
                 return shuffleCard()
 
             }, 1000)
-            alert("winner!!!")
 
         }
         cardOne.removeEventListener("click", flipCard)
@@ -75,10 +76,16 @@ let countdown=((minutes)=> {
 
         if (--seconds < 0) {
             clearInterval(interval)
-            countdownElement.innerHTML = "Countdown finished!"
-        
+            countdownElement.innerHTML = "The cards shuffled .. Try again"
+            countdown(2)
         }
-    }, 1000)
+        if (matched==8){
+            clearInterval(interval)
+            countdownElement.innerHTML = "You Win !!!" 
+            countdown(2)
+        }
+
+    }, 1000) 
 })
 
 countdown(2)

@@ -1,13 +1,13 @@
 html{
-    background-image:url(./IMAGES/IMG_0250.jpg);
+    background-color:black;
     background-repeat: no-repeat;
 }
 button{
 
-background-color: #ff67e1;
+background-color: #000000;
 border-radius: 100px;
-box-shadow: rgba(244, 116, 216, 0.925) 0 -25px 18px -14px inset,rgba(255, 133, 216, 0.732) 0 1px 2px,rgba(235, 65, 190, 0.914) 0 2px 4px,rgba(255, 0, 204, 0.767) 0 4px 8px,rgba(237, 48, 193, 0.848) 0 8px 16px,rgba(231, 34, 139, 0.801) 0 16px 32px;
-color: rgb(255, 193, 221);
+box-shadow: rgba(240, 82, 82, 0.925) 0 -25px 18px -14px inset,rgba(248, 5, 5, 0.888) 0 1px 2px,rgba(255, 0, 0, 0.914) 0 2px 4px,rgba(204, 15, 15, 0.767) 0 4px 8px,rgba(153, 0, 0, 0.848) 0 8px 16px,rgba(206, 1, 1, 0.801) 0 16px 32px;
+color: rgb(255, 255, 255);
 cursor:pointer;
 font-family: "Lucida Console", "Monaco", monospace;
 padding: 7px 20px;
@@ -17,28 +17,42 @@ font-size: 16px;
 }
 .btn{
 
-display: flex;
-justify-content: center;
-align-items: center;
-}
-.topic{
-    margin:0 auto;
-    text-align: center;
-    font-family: "Lucida Console", "Monaco", monospace;
-    text-shadow: 3px 3px #f4a272ec;
-    color: rgb(255, 0, 123);
-
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .topic{
+        margin:0 auto;
+        text-align: center;
+        font-family: "Lucida Console", "Monaco", monospace;
+        text-shadow: 3px 3px #ffffffec;
+        color: rgb(255, 0, 0);
+    
+    }
+    .timer{
+        margin:0 auto;
+        font-family: "Lucida Console", "Monaco", monospace;
+        text-shadow: 1px 1px #ffffffec;
+        color: rgb(255, 0, 0); 
+    
+    }
+    .lifes{
+        display: flex;
+        margin:0 auto;
+        font-family: "Lucida Console", "Monaco", monospace;
+        text-shadow: 1px 1px #ffffffec;
+        color: rgb(255, 0, 0); 
+    }
 
 
 .wrapper{
     padding: 1vh;
     border-radius: 1vh;
-    background: #f9dcf6;
+    background: #000000;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: auto;
     display: flex;
     justify-content:space-evenly;
-    width: auto;
 
 }
 .cards, .card, .view{
@@ -61,6 +75,8 @@ align-items: center;
     transform-style: preserve-3d;
     height: calc(70vh / 4 - 2vh);
     width: calc(50vh / 4 - 2vh);
+    box-shadow: 0.2vh 0.2vh 0.2vh 0.2vh rgb(255, 0, 0);
+
 }
 .card.shake{
     animation: shake 0.35s ease-in-out;

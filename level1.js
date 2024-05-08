@@ -2,7 +2,8 @@ const cards = document.querySelectorAll(".card")
 let matched = 0
 let cardOne, cardTwo
 let disableDeck = false
-
+let openCards =[]
+let countdownElement = document.getElementById('second')
 
 
 let flipCard=(({target: clickedCard}) =>{
@@ -21,19 +22,25 @@ let flipCard=(({target: clickedCard}) =>{
 let matchCards=((img1, img2)=> {
     if(img1 === img2) {
         matched++
+            const pushToOpenCards= ((matchCards)=>{
+                openCards.push(matchCards)
+                if(openCards.length=3){
+                    
+                }
+            })
+            pushToOpenCards(matchCards)
+            console.log(openCards)
         if(matched == 4) {
             setTimeout(() => {
                 return shuffleCard()
             }, 1000)             
-            alert ("Winner!!")
-
         }
         cardOne.removeEventListener("click", flipCard)
         cardTwo.removeEventListener("click", flipCard)
         cardOne = cardTwo = ""
         return disableDeck = false
-
     }
+
     setTimeout(() => {
         cardOne.classList.add("shake")
         cardTwo.classList.add("shake")
@@ -59,13 +66,13 @@ let shuffleCard=(() =>{
     })
 })
 shuffleCard()
-    
+
+
 cards.forEach(card => {
     card.addEventListener("click", flipCard)
 })
 
 
-let countdownElement = document.getElementById('second')
 
 let countdown=((minutes)=> {
     let seconds = minutes * 60
@@ -77,9 +84,18 @@ let countdown=((minutes)=> {
 
         if (--seconds < 0) {
             clearInterval(interval)
-            countdownElement.innerHTML = shuffleCard()
+            countdownElement.innerHTML = "Time Up .. Try again"
+            shuffleCard()
+            countdown(1)
         }
-    }, 1000)
+        if (matched==4){
+            clearInterval(interval)
+            countdownElement.innerHTML = "You Win !!!" 
+            countdown(1)
+        }
+
+    }, 1000) 
 })
 
 countdown(1)
+

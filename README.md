@@ -21,11 +21,11 @@
 ### ***Screenshots***
 
 ##### image header 1
-![start page]![Alt text](./IMAGES/image%20copy.png)
+![start page]![Alt text](./IMAGES/image%2520copy.png)
 
 ##### image header 2
-![Level1 page]![Alt text](./IMAGES/image%30copy.png)
-![Level2 page]![Alt text](./IMAGES/image%40copy.png)
+![Level1 page]![Alt text](./IMAGES/image%2530copy.png)
+![Level2 page]![Alt text](./IMAGES/image%2540copy.png)
 
 ***
 
